@@ -401,6 +401,10 @@ footer {
             @include msp {
                 font-size: 0.6em;
             }
+
+            &:hover{
+                color: gray;
+            }
         }
     }
 }
