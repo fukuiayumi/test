@@ -561,6 +561,10 @@ footer {
   }
 }
 
+.icon img:hover {
+  opacity: 0.5;
+}
+
 .copyright {
   width: 100%;
   text-align: center;
@@ -1223,7 +1227,15 @@ footer {
   width: 40%;
   height: 30em;
   background-color: #fcfcfc;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1248,20 +1260,11 @@ footer {
   font-size: 6em;
   color: #aaabab;
   font-weight: bolder;
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  -webkit-transform: translate(-60%, -65%);
-          transform: translate(-60%, -65%);
 }
 
 @media screen and (max-width: 1200px) {
   .works_item_number p {
     font-size: 5em;
-    top: 45%;
-    left: 30%;
-    -webkit-transform: translate(-55%, -70%);
-            transform: translate(-55%, -70%);
   }
 }
 
@@ -1274,10 +1277,6 @@ footer {
 @media screen and (max-width: 680px) {
   .works_item_number p {
     font-size: 3em;
-    top: 45%;
-    left: 25%;
-    -webkit-transform: translate(-55%, -75%);
-            transform: translate(-55%, -75%);
   }
 }
 

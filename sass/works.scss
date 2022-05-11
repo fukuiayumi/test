@@ -195,7 +195,9 @@
         width: 40%;
         height: 30em;
         background-color: $white;
-        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @include mmpc {
             height: 20em;
@@ -213,16 +215,9 @@
             font-size: 6em;
             color: $number;
             font-weight: bolder;
-            position: absolute;
-            top: 40%;
-            left: 35%;
-            transform: translate(-60%, -65%);
 
             @include mmpc {
                 font-size: 5em;
-                top: 45%;
-                left: 30%;
-                transform: translate(-55%, -70%);
             }
 
             @include pc {
@@ -231,9 +226,6 @@
 
             @include tab2 {
                 font-size: 3em;
-                top: 45%;
-                left: 25%;
-                transform: translate(-55%, -75%);
             }
 
             @include msp {

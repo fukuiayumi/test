@@ -561,6 +561,10 @@ footer {
   }
 }
 
+.icon img:hover {
+  opacity: 0.5;
+}
+
 .copyright {
   width: 100%;
   text-align: center;

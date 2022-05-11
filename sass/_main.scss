@@ -919,6 +919,7 @@
         text-align: center;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
         margin-bottom: 8%;
+        background-color: $white;
 
         @include pc {
             height: 8em;
@@ -947,6 +948,15 @@
 
             @include tab2 {
                 display: none;
+            }
+        }
+
+        a{
+            color: $color;
+
+            &:hover{
+                color: gray;
+                opacity: 0.5;
             }
         }
 
@@ -1018,10 +1028,12 @@
 .recruit {
     width: 100%;
     padding: 20% 0 8% 0;
+    margin-bottom: 8%;
     position: relative;
 
     @include msp {
         padding: 15% 0;
+        margin-bottom: 0;
     }
 
     &_wrapper {
@@ -1052,7 +1064,7 @@
 
         @include tab2 {
             height: 12em;
-            top: 5%;
+            top: 15%;
             left: 5%;
         }
 
@@ -1096,7 +1108,7 @@
 
         @include tab2 {
             width: 80%;
-            height: 18em;
+            height: 16em;
         }
 
         @include tab3 {
@@ -1226,19 +1238,33 @@
         }
 
         @include tab2 {
-            width: 280px;
-            height: 280px;
-            right: 2%;
+            width: 450px;
+            height: 450px;
+            top: 25%;
+            right: 20%;
         }
 
         @include tab3 {
-            width: 200px;
-            height: 200px;
+            width: 380px;
+            height: 380px;
+        }
+
+        @include sp{
+            width: 280px;
+            height: 280px;
+            top: 40%;
         }
 
         @include msp {
+            width: 200px;
+            height: 200px;
+            right: 25%;
+        }
+
+        @include ssp{
             width: 150px;
             height: 150px;
+            right: 20%;
         }
     }
 }
@@ -1253,7 +1279,7 @@
     background-color: $white;
     border: solid 1px $color;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 8% auto;
 
     @include mpc {
         width: 25%;

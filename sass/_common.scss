@@ -443,6 +443,10 @@ footer {
         @include sp {
             width: 45%;
         }
+
+        &:hover{
+            opacity: 0.5;
+        }
     }
 }
 

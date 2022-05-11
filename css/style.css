@@ -561,6 +561,10 @@ footer {
   }
 }
 
+.icon img:hover {
+  opacity: 0.5;
+}
+
 .copyright {
   width: 100%;
   text-align: center;
@@ -1537,6 +1541,10 @@ footer {
   .icon img {
     width: 45%;
   }
+}
+
+.icon img:hover {
+  opacity: 0.5;
 }
 
 .copyright {
@@ -3051,6 +3059,7 @@ footer {
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 8%;
+  background-color: #fcfcfc;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3089,6 +3098,15 @@ footer {
   .news_item:nth-child(3), .news_item:nth-child(4) {
     display: none;
   }
+}
+
+.news_item a {
+  color: #1a0b08;
+}
+
+.news_item a:hover {
+  color: gray;
+  opacity: 0.5;
 }
 
 .news_item img {
@@ -3172,12 +3190,14 @@ footer {
 .recruit {
   width: 100%;
   padding: 20% 0 8% 0;
+  margin-bottom: 8%;
   position: relative;
 }
 
 @media screen and (max-width: 380px) {
   .recruit {
     padding: 15% 0;
+    margin-bottom: 0;
   }
 }
 
@@ -3218,7 +3238,7 @@ footer {
 @media screen and (max-width: 680px) {
   .recruit_img {
     height: 12em;
-    top: 5%;
+    top: 15%;
     left: 5%;
   }
 }
@@ -3276,7 +3296,7 @@ footer {
 @media screen and (max-width: 680px) {
   .recruit_text_wrapper {
     width: 80%;
-    height: 18em;
+    height: 16em;
   }
 }
 
@@ -3443,23 +3463,41 @@ footer {
 
 @media screen and (max-width: 680px) {
   .recruit_circle {
-    width: 280px;
-    height: 280px;
-    right: 2%;
+    width: 450px;
+    height: 450px;
+    top: 25%;
+    right: 20%;
   }
 }
 
 @media screen and (max-width: 580px) {
   .recruit_circle {
-    width: 200px;
-    height: 200px;
+    width: 380px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recruit_circle {
+    width: 280px;
+    height: 280px;
+    top: 40%;
   }
 }
 
 @media screen and (max-width: 380px) {
   .recruit_circle {
+    width: 200px;
+    height: 200px;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .recruit_circle {
     width: 150px;
     height: 150px;
+    right: 20%;
   }
 }
 
@@ -3472,7 +3510,7 @@ footer {
   background-color: #fcfcfc;
   border: solid 1px #1a0b08;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 8% auto;
 }
 
 @media screen and (max-width: 1300px) {
