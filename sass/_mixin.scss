@@ -1,0 +1,101 @@
+@mixin background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+$bbpc: 2000px;
+
+@mixin bbpc {
+    @media screen and (max-width: ($bbpc)) {
+        @content;
+    }
+}
+
+$bpc: 1450px;
+
+@mixin bpc {
+    @media screen and (max-width: ($bpc)) {
+        @content;
+    }
+}
+
+$mpc: 1300px;
+
+@mixin mpc {
+    @media screen and (max-width: ($mpc)) {
+        @content;
+    }
+}
+
+$mmpc: 1200px;
+
+@mixin mmpc {
+    @media screen and (max-width: ($mmpc)) {
+        @content;
+    }
+}
+
+$pc: 1024px;
+
+@mixin pc {
+    @media screen and (max-width: ($pc)) {
+        @content;
+    }
+}
+
+$btab: 900px;
+
+@mixin btab {
+    @media screen and (max-width: ($btab)) {
+        @content;
+    }
+}
+
+$tab: 768px;
+
+@mixin tab {
+    @media screen and (max-width: ($tab)) {
+        @content;
+    }
+}
+
+$tab2: 680px;
+
+@mixin tab2 {
+    @media screen and (max-width: ($tab2)) {
+        @content;
+    }
+}
+
+$tab3: 580px;
+
+@mixin tab3 {
+    @media screen and (max-width: ($tab3)) {
+        @content;
+    }
+}
+
+$sp: 480px;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
+$msp: 380px;
+
+@mixin msp {
+    @media screen and (max-width: ($msp)) {
+        @content;
+    }
+}
+
+$ssp: 300px;
+
+@mixin ssp {
+    @media screen and (max-width: ($ssp)) {
+        @content;
+    }
+}

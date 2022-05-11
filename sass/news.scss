@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+@import "common";
+@import "color";
+@import "mixin";
+
+.news_top {
+    width: 100%;
+    height: 32em;
+    position: relative;
+    overflow: hidden;
+
+    @include tab2 {
+        height: 15em;
+    }
+
+    &_wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/news/news_top.jpg);
+        @include background;
+
+        &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &_ttl {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+
+        @include pc {
+            top: 45%;
+            left: 45%;
+            transform: translate(-55%, -55%);
+        }
+
+        @include btab {
+            top: 45%;
+            left: 45%;
+            transform: translate(-55%, -55%);
+        }
+
+        @include tab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: lighter;
+            color: $white;
+
+            @include pc {
+                font-size: 3em;
+            }
+
+            @include sp {
+                font-size: 2em;
+            }
+
+            @include ssp {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.news {
+    width: 100%;
+    padding: 8% 0;
+    position: relative;
+
+    @include tab2 {
+        padding: 10% 0;
+    }
+
+    &_wrapper {
+        width: 95%;
+        margin: 0 auto;
+
+        @include pc {
+            width: 90%;
+        }
+    }
+
+    &_list {
+        width: 100%;
+        display: flex;
+
+        @include tab2 {
+            display: block;
+        }
+    }
+
+    &_item {
+        width: 30%;
+        margin: 0 1%;
+
+        @include tab2 {
+            width: 60%;
+            margin: 0 auto 15% auto;
+        }
+
+        @include sp {
+            width: 80%;
+        }
+
+        a {
+            color: $color;
+        }
+    }
+
+    &_img {
+        width: 100%;
+        height: 13em;
+        background-color: #fff;
+
+        @include pc {
+            height: 10em;
+        }
+
+        @include btab {
+            height: 8em;
+        }
+
+        @include tab2 {
+            height: 12em;
+        }
+
+        @include ssp {
+            height: 10em;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &_text {
+        width: 100%;
+        height: 7em;
+        text-align: center;
+        background-color: $white;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+        @include pc {
+            height: 5em;
+        }
+
+        @include tab2 {
+            height: 8em;
+        }
+
+        @include sp {
+            height: 6em;
+        }
+    }
+
+    &_date {
+        font-size: 1.4em;
+        padding: 7% 0;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        @include pc {
+            font-size: 1em;
+        }
+
+        @include tab2 {
+            font-size: 1.2em;
+        }
+
+        @include sp {
+            font-size: 1em;
+        }
+    }
+
+    &_ttl {
+        font-size: 1.4em;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        @include pc {
+            font-size: 1em;
+        }
+
+        @include tab2 {
+            font-size: 1.2em;
+        }
+
+        @include sp {
+            font-size: 1em;
+        }
+    }
+
+    &_l_circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: $orange1;
+        position: absolute;
+        top: 8%;
+        left: 0;
+        z-index: -1;
+
+        @include pc {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+        }
+
+        @include tab2 {
+            width: 250px;
+            height: 250px;
+            top: 0;
+            left: 40%;
+        }
+
+        @include sp {
+            left: 30%;
+        }
+
+        @include msp {
+            width: 200px;
+            height: 200px;
+            left: 23%;
+        }
+    }
+
+    &_m_circle {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgba(250, 202, 123, 0.8);
+        position: absolute;
+        top: 0;
+        right: 3%;
+        z-index: -1;
+
+        @include pc {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include tab2 {
+            width: 250px;
+            height: 250px;
+            top: 70%;
+        }
+
+        @include sp {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    &_s_circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(250, 202, 123, 0.5);
+        position: absolute;
+        top: 65%;
+        right: 23%;
+        z-index: -1;
+
+        @include pc {
+            width: 80px;
+            height: 80px;
+        }
+
+        @include tab2 {
+            width: 150px;
+            height: 150px;
+            top: 45%;
+            right: 70%;
+        }
+
+        @include sp {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

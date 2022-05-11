@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+@import "common";
+@import "color";
+@import "mixin";
+
+.recruit_top {
+    width: 100%;
+    height: 32em;
+    position: relative;
+    overflow: hidden;
+
+    @include tab2 {
+        height: 15em;
+    }
+
+    &_wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/recruit/recruit_top.jpg);
+        @include background;
+
+        &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &_ttl {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+
+        @include mmpc {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        @include pc {
+            top: 45%;
+            left: 45%;
+            transform: translate(-55%, -55%);
+        }
+
+        @include btab {
+            top: 45%;
+            left: 40%;
+            transform: translate(-55%, -60%);
+        }
+
+        @include tab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: lighter;
+            color: $white;
+
+            @include pc {
+                font-size: 3em;
+            }
+
+            @include sp {
+                font-size: 2em;
+            }
+
+            @include ssp {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.recruit {
+    width: 100%;
+    padding: 13% 0;
+    margin-bottom: 20%;
+    position: relative;
+
+    &_wrapper {
+        width: 70%;
+        margin: 0 auto;
+
+        @include msp {
+            width: 85%;
+        }
+    }
+
+    &_text {
+        width: 65%;
+        height: 35em;
+        background-color: $white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        margin: 0 auto 0 10%;
+
+        @include pc {
+            height: 27em;
+        }
+
+        @include btab {
+            height: 23em;
+        }
+
+        @include tab {
+            height: 27em;
+        }
+
+        @include tab2 {
+            width: 70%;
+            height: 20em;
+        }
+
+        @include sp {
+            width: 80%;
+            height: 18em;
+        }
+
+        @include msp {
+            width: 90%;
+            height: 18em;
+            margin: 0 auto 0 0;
+        }
+
+        @include sp {
+            width: 95%;
+            height: 18em;
+        }
+
+        &_top {
+            padding: 10% 0 10% 15%;
+            font-size: 1.5em;
+            line-height: 1.5em;
+
+            @include pc {
+                padding: 10% 0 8% 15%;
+                font-size: 1.2em;
+            }
+
+            @include btab {
+                padding: 12% 0 8% 8%;
+            }
+
+            @include tab2 {
+                font-size: 1em;
+            }
+
+            @include tab2 {
+                font-size: 0.8em;
+            }
+        }
+
+        &_middle {
+            padding: 3% 0 3% 15%;
+            line-height: 1.5em;
+
+            @include pc {
+                line-height: 1em;
+            }
+
+            @include btab {
+                padding: 3% 0 3% 8%;
+                font-size: 0.8em;
+            }
+
+            @include tab2 {
+                font-size: 0.6em;
+            }
+        }
+
+        &_bottom {
+            padding: 3% 0;
+            text-align: center;
+
+            @include pc {
+                font-size: 1em;
+            }
+
+            @include btab {
+                font-size: 0.8em;
+            }
+
+            @include tab2 {
+                font-size: 0.6em;
+            }
+        }
+    }
+
+    &_img {
+        width: 45%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 70%;
+        right: 10%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+
+        @include tab {
+            right: 20%;
+            z-index: 1;
+        }
+
+        @include tab2 {
+            width: 40%;
+            top: 75%;
+            right: 25%;
+        }
+
+        @include sp {
+            width: 45%;
+            top: 80%;
+        }
+
+        @include msp {
+            width: 48%;
+        }
+    }
+
+    &_suqare {
+        width: 600px;
+        height: 600px;
+        background-color: $bule1;
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        z-index: -2;
+
+        @include mmpc {
+            width: 500px;
+            height: 500px;
+        }
+
+        @include btab {
+            width: 350px;
+            height: 350px;
+        }
+
+        @include tab {
+            width: 450px;
+            height: 300px;
+            top: 50%;
+            left: 28%;
+        }
+
+        @include tab2 {
+            width: 280px;
+            height: 200px;
+            top: 50%;
+            left: 35%;
+        }
+
+        @include sp {
+            left: 25%;
+        }
+
+        @include msp {
+            width: 180px;
+            height: 180px;
+            top: 60%;
+            left: 35%;
+        }
+
+        @include ssp {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            left: 35%;
+        }
+    }
+
+    &_btn {
+        margin: 20% auto 10% auto;
+    }
+}

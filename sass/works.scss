@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+@import "color";
+@import "mixin";
+@import "common";
+
+.works_top {
+    width: 100%;
+    height: 32em;
+    position: relative;
+    overflow: hidden;
+
+    @include tab2 {
+        height: 15em;
+    }
+
+    &_wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/works/works_top.jpg);
+        @include background;
+
+        &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &_ttl {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+
+        @include pc {
+            top: 45%;
+            left: 40%;
+            transform: translate(-60%, -55%);
+        }
+
+        @include btab {
+            top: 45%;
+            left: 40%;
+            transform: translate(-55%, -60%);
+        }
+
+        @include tab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: lighter;
+            color: $white;
+
+            @include pc {
+                font-size: 3em;
+            }
+
+            @include sp {
+                font-size: 2em;
+            }
+
+            @include ssp {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.works {
+    padding: 8% 0;
+
+    @include msp {
+        padding: 15% 0;
+    }
+}
+
+.works_item {
+    width: 100%;
+
+    &_wrapper_left {
+        width: 100%;
+        background-color: $bule2;
+        margin-bottom: 10%;
+
+        @include tab2 {
+            margin-bottom: 20%;
+        }
+    }
+
+    &_wrapper_right {
+        width: 100%;
+        background-color: $brown;
+        margin-bottom: 10%;
+
+        @include tab2 {
+            margin-bottom: 20%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &_left {
+        width: 100%;
+        display: flex;
+
+        @include mmpc {
+            height: 20em;
+        }
+
+        @include tab2 {
+            height: 15em;
+        }
+
+        @include sp {
+            height: 13em;
+        }
+    }
+
+    &_right {
+        width: 100%;
+        display: flex;
+
+        @include mmpc {
+            height: 20em;
+        }
+
+        @include tab2 {
+            height: 15em;
+        }
+
+        @include sp {
+            height: 13em;
+        }
+    }
+
+    &_img {
+        width: 60%;
+        height: 30em;
+        position: relative;
+
+        @include mmpc {
+            height: 20em;
+        }
+
+        @include tab2 {
+            height: 15em;
+        }
+
+        @include sp {
+            height: 13em;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $white;
+            padding: 3% 8%;
+            font-size: 2em;
+            font-weight: lighter;
+
+            @include mmpc {
+                font-size: 1.5em;
+            }
+
+            @include tab2 {
+                font-size: 1em;
+            }
+
+            @include ssp {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    &_number {
+        width: 40%;
+        height: 30em;
+        background-color: $white;
+        position: relative;
+
+        @include mmpc {
+            height: 20em;
+        }
+
+        @include tab2 {
+            height: 15em;
+        }
+
+        @include sp {
+            height: 13em;
+        }
+
+        p {
+            font-size: 6em;
+            color: $number;
+            font-weight: bolder;
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            transform: translate(-60%, -65%);
+
+            @include mmpc {
+                font-size: 5em;
+                top: 45%;
+                left: 30%;
+                transform: translate(-55%, -70%);
+            }
+
+            @include pc {
+                font-size: 4em;
+            }
+
+            @include tab2 {
+                font-size: 3em;
+                top: 45%;
+                left: 25%;
+                transform: translate(-55%, -75%);
+            }
+
+            @include msp {
+                font-size: 2.5em;
+            }
+
+            @include ssp {
+                font-size: 2em;
+            }
+        }
+    }
+
+    &_text {
+        width: 60%;
+        background-color: $white;
+
+        p {
+            padding: 5% 0 5% 8%;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.5em;
+
+            @include btab {
+                font-size: 1em;
+            }
+
+            @include tab2 {
+                font-size: 0.6em;
+            }
+
+            @include msp {
+                padding: 5% 3%;
+                font-size: 0.5em;
+            }
+        }
+    }
+
+    &_text_right {
+        width: 60%;
+        background-color: $white;
+        margin-left: auto;
+
+        p {
+            padding: 5% 0 5% 8%;
+            font-size: 1.2em;
+            line-height: 1.5em;
+
+            @include btab {
+                font-size: 1em;
+            }
+
+            @include tab2 {
+                font-size: 0.6em;
+            }
+
+            @include msp {
+                font-size: 0.5em;
+                padding: 5% 3%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,255 @@
+@import "common";
+@import "color";
+@import "mixin";
+
+.service_top {
+    width: 100%;
+    height: 32em;
+    position: relative;
+    overflow: hidden;
+
+    @include tab2 {
+        height: 15em;
+    }
+
+    &_wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/service/service_top.jpg);
+        @include background;
+
+        &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &_ttl {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+
+        @include pc {
+            top: 45%;
+            left: 40%;
+            transform: translate(-55%, -60%);
+        }
+
+        @include btab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        @include tab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: lighter;
+            color: $white;
+
+            @include pc {
+                font-size: 3em;
+            }
+
+            @include sp {
+                font-size: 2em;
+            }
+
+            @include ssp {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.service_item {
+    width: 100%;
+    padding: 8% 0;
+    position: relative;
+
+    @include tab2 {
+        padding: 10% 0;
+    }
+
+    @include msp {
+        padding: 20% 0;
+    }
+
+    &_wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+
+        @include tab2 {
+            display: block;
+        }
+    }
+
+    &_list {
+        width: 70%;
+        margin: 5%;
+
+        @include tab2 {
+            width: 70%;
+            margin: 0 auto 15% auto;
+        }
+    }
+
+    &_img {
+        width: 100%;
+        height: 25em;
+
+        @include mpc {
+            height: 15em;
+        }
+
+        @include pc {
+            height: 10em;
+        }
+
+        @include tab2 {
+            height: 15em;
+        }
+
+        @include sp {
+            height: 12em;
+        }
+
+        @include msp {
+            height: 10em;
+        }
+
+        @include ssp {
+            height: 8em;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_text {
+        width: 100%;
+        height: 15em;
+        background-color: $white;
+        box-shadow: 10px 10px 10px #ddd;
+
+        @include mpc {
+            height: 12em;
+        }
+
+        @include btab {
+            height: 10em;
+        }
+
+        @include tab2 {
+            height: 13em;
+        }
+
+        @include sp {
+            height: 10em;
+        }
+
+        @include msp {
+            height: 8em;
+        }
+
+        @include ssp {
+            height: 9em;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: lighter;
+            padding: 10% 0;
+
+            @include sp {
+                font-size: 1.2em;
+                padding: 7% 0;
+            }
+
+            @include msp {
+                font-size: 1em;
+            }
+
+            @include ssp {
+                font-size: 0.8em;
+            }
+        }
+
+        p {
+            width: 55%;
+            margin: 0 auto;
+            font-size: 0.8em;
+            line-height: 1.8em;
+            letter-spacing: 1.5%;
+
+            @include sp {
+                width: 70%;
+            }
+
+            @include msp {
+                font-size: 0.6em;
+            }
+        }
+    }
+}
+
+.service_suqare {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    border: solid 40px $yellow;
+    z-index: -1;
+
+    @include mmpc {
+        top: 35%;
+        left: 35%;
+        width: 300px;
+        height: 300px;
+        border: solid 20px $yellow;
+    }
+
+    @include pc {
+        left: 33%;
+    }
+
+    @include btab {
+        left: 28%;
+    }
+
+    @include tab2 {
+        border-style: none;
+        width: 50px;
+        height: 1700px;
+        background-color: $yellow;
+        top: 10%;
+        left: 45%;
+    }
+
+    @include sp {
+        height: 1300px;
+    }
+
+    @include msp {
+        top: 15%;
+        height: 1000px;
+    }
+}

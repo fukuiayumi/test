@@ -1,0 +1,716 @@
+@import "color";
+@import "mixin";
+
+
+
+body {
+    width: 100%;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    button {
+        border-style: none;
+        background-color: $color;
+
+        a {
+            color: $white;
+            font-weight: lighter;
+        }
+    }
+}
+
+header {
+    width: 100%;
+
+    nav {
+        width: 40%;
+        margin: 0 3% 0 auto;
+
+        @include btab {
+            width: 60%;
+        }
+
+        @include tab2 {
+            background-color: rgba(252, 252, 252, 0.7);
+            position: fixed;
+            display: none;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        @include sp {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include ssp {
+            width: 200px;
+            height: 200px;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 4% 0;
+            list-style: none;
+
+            @include tab2 {
+                display: block;
+                margin: 15% auto;
+                text-align: center;
+            }
+
+            li {
+                @include tab2 {
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    font-size: 0.8em;
+                    color: $color;
+
+                    @include mmpc {
+                        font-size: 0.6em;
+                    }
+
+                    @include tab2 {
+                        font-size: 1em;
+                    }
+
+                    @include ssp {
+                        font-size: 0.6em;
+                    }
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-open .drawer {
+    @include tab2 {
+        border-top: none;
+    }
+
+    &::before {
+        top: 9px;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+}
+
+.drawer {
+    visibility: hidden;
+
+    @include tab2 {
+        visibility: visible;
+        width: 50px;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        border-top: solid 2px $white;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    @include sp {
+        width: 35px;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        background: $white;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.5s;
+
+        @include sp {
+            width: 35px;
+        }
+    }
+
+    &::before {
+        top: 10px;
+    }
+
+    &::after {
+        top: 22px;
+    }
+}
+
+.breadcrumb {
+    width: 20%;
+    padding: 6% 6% 0 6.5%;
+
+    &_list {
+        display: flex;
+        align-items: center;
+    }
+
+    &_item {
+        padding: 0 1.5%;
+
+        a {
+            color: $color;
+            font-size: 1.8em;
+
+            @include pc {
+                font-size: 1em;
+            }
+
+            @include sp {
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    &_color {
+        color: $orange2;
+    }
+
+    &_arrow {
+        font-size: 1.8em;
+
+        @include pc {
+            font-size: 1em;
+        }
+
+        @include sp {
+            font-size: 0.7em;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: $footerBg;
+}
+
+.footer {
+
+    &_wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 8% 0 6.5% 0;
+        display: flex;
+        justify-content: center;
+
+        @include tab {
+            display: block;
+        }
+
+    }
+
+    &_text {
+        width: 33%;
+        margin: 0 15% 0 5%;
+
+        @include tab {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include ssp {
+            width: 90%;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: lighter;
+            margin-bottom: 5%;
+
+            @include pc {
+                font-size: 2em;
+                margin-bottom: 15%;
+            }
+
+            @include tab {
+                font-size: 2.5em;
+                margin-bottom: 5%;
+            }
+
+            @include tab2 {
+                font-size: 2em;
+            }
+
+            @include sp {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    &_text_wrap {
+        @include tab {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 3em;
+            margin-bottom: 5%;
+        }
+
+        @include msp {
+            height: 2em;
+        }
+    }
+
+    &_tel {
+        font-size: 1.2em;
+        margin-bottom: 3%;
+
+        @include pc {
+            font-size: 1em;
+            margin-bottom: 5%;
+        }
+
+        @include tab {
+            font-size: 1.5em;
+            margin-bottom: 0;
+        }
+
+        @include tab2 {
+            font-size: 1em;
+        }
+
+        @include sp {
+            font-size: 0.8em;
+        }
+
+        @include msp {
+            font-size: 0.6em;
+        }
+    }
+
+    &_time {
+        font-size: 1.2em;
+
+        @include pc {
+            font-size: 1em;
+        }
+
+        @include tab {
+            font-size: 1.5em;
+        }
+
+        @include tab2 {
+            font-size: 1em;
+        }
+
+        @include sp {
+            font-size: 0.8em;
+        }
+
+        @include msp {
+            font-size: 0.6em;
+        }
+    }
+
+    &_time {
+        margin-bottom: 20%;
+    }
+
+    &_nav {
+        width: 25%;
+
+        @include mpc {
+            width: 40%;
+        }
+
+        @include tab {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        @include tab2 {
+            width: 60%;
+        }
+
+        @include sp {
+            width: 80%;
+        }
+
+        @include msp {
+            width: 90%;
+        }
+
+
+        ul {
+            border-left: solid 5px $color;
+
+            @include pc {
+                border-left: solid 2px $color;
+            }
+
+            @include tab {
+                border-left: solid 5px $color;
+                margin-bottom: 5%;
+            }
+
+            @include tab2 {
+                border-left: solid 2px $color;
+            }
+        }
+    }
+
+    &_nav_item {
+        margin: 0 0 10% 10%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-size: 1em;
+            color: $color;
+
+            @include pc {
+                font-size: 0.8em;
+            }
+
+            @include tab {
+                font-size: 1em;
+            }
+
+            @include tab2 {
+                font-size: 0.8em;
+            }
+
+            @include msp {
+                font-size: 0.6em;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+
+    @include mpc {
+        width: 45%;
+    }
+
+    @include pc {
+        width: 60%;
+    }
+
+    @include tab {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto 10% auto;
+        text-align: center;
+    }
+
+    @include tab2 {
+        margin: 0 auto 15% auto;
+    }
+
+    img {
+        width: 73%;
+
+        @include tab {
+            width: 50%;
+        }
+
+        @include sp {
+            width: 45%;
+        }
+    }
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+
+    p {
+        font-size: 0.8em;
+        padding: 2% 0;
+
+        @include tab2 {
+            font-size: 0.6em;
+        }
+    }
+}
+
+.top_btn,
+.top_btn2 {
+    display: block;
+    width: 13%;
+    text-align: center;
+    margin: 0 6% 0 auto;
+    padding: 1.5% 3%;
+    font-size: 1.2em;
+    color: $white;
+    background-color: $color;
+
+    @include btab {
+        width: 20%;
+        font-size: 1em;
+    }
+
+    @include tab2 {
+        width: 39.3%;
+        font-size: 0.8em;
+        padding: 3%;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $color;
+        border: solid 1px $color;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+}
+
+.top_btn2 {
+    visibility: hidden;
+
+    @include tab2 {
+        visibility: visible;
+        margin: 10% auto;
+    }
+}
+
+.contact_btn {
+    width: 20%;
+    display: block;
+    font-size: 1.2em;
+    color: $white;
+    background-color: $color;
+    padding: 1.8% 0;
+    text-align: center;
+    margin: 0 auto 10% auto;
+
+    @include pc {
+        font-size: 1.2em;
+    }
+
+    @include tab2 {
+        padding: 2% 18%;
+        font-size: 1em;
+    }
+
+    @include msp {
+        width: 35%;
+        padding: 2.5% 15%;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $color;
+        border: solid 1px $color;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+}
+
+// ---animetion----
+
+.fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.zoom {
+    width: 100%;
+    height: auto;
+    animation: animationZoom 5s ease-in-out forwards;
+}
+
+@keyframes animationZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+.fadeUp {
+    animation-name: fadeAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-time02 {
+    animation-delay: 0.2s;
+}
+
+.delay-time04 {
+    animation-delay: 0.4s;
+}
+
+.delay-time06 {
+    animation-delay: 0.6s;
+}
+
+.delay-time08 {
+    animation-delay: 0.8s;
+}
+
+.delay-time10 {
+    animation-delay: 1s;
+}
+
+.delay-time12 {
+    animation-delay: 1.2s;
+}
+
+
+.slide-in {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+    display: inline-block;
+
+}
+
+.leftAnime {
+    opacity: 0;
+}
+
+.slideAnimeLeftRight {
+    animation-name: slideTextX100;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slideAnimeRightLeft {
+    animation-name: slideTextX-100;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.flipRight {
+    animation-name: flipRightAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    perspective-origin: right center;
+    opacity: 0;
+}
+
+@keyframes flipRightAnime {
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.slideRight {
+    animation: SlideRight 0.8s;
+}
+
+@keyframes SlideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(64px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideLeft {
+    animation: SlideLeft 0.8s;
+}
+
+@keyframes SlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-64px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

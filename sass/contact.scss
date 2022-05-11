@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+@import "common";
+@import "color";
+@import "mixin";
+
+.contact_top {
+    width: 100%;
+    height: 32em;
+    position: relative;
+    overflow: hidden;
+
+    @include tab2 {
+        height: 15em;
+    }
+
+    &_wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(../image/contact/contac_top.jpg);
+        @include background;
+
+        &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &_ttl {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+
+        @include mmpc {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        @include pc {
+            top: 45%;
+            left: 40%;
+            transform: translate(-55%, -60%);
+        }
+
+        @include btab {
+            top: 45%;
+            left: 40%;
+            transform: translate(-55%, -55%);
+        }
+
+        @include tab {
+            top: 45%;
+            left: 35%;
+            transform: translate(-55%, -65%);
+        }
+
+        @include tab2 {
+            left: 33%;
+        }
+
+        @include sp {
+            left: 32%;
+        }
+
+        @include ssp {
+            left: 30%;
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: lighter;
+            color: $white;
+
+            @include pc {
+                font-size: 3em;
+            }
+
+            @include sp {
+                font-size: 2em;
+            }
+
+            @include ssp {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.contact_form {
+    width: 70%;
+    padding: 13% 0;
+    margin: 0 auto;
+
+    @include tab {
+        width: 80%;
+    }
+
+    @include tab2 {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    &_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tab2 {
+            display: block;
+        }
+    }
+
+    &_ttl {
+        width: 40%;
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tab2 {
+            width: 60%;
+            margin-bottom: 3%;
+        }
+
+        @include msp {
+            width: 80%;
+        }
+
+        @include ssp {
+            font-size: 0.8em;
+        }
+    }
+
+    &_box {
+        width: 40%;
+        height: 3em;
+        border: solid 1px $color;
+        background-color: $box;
+
+        @include btab {
+            width: 50%;
+        }
+
+        @include tab2 {
+            width: 100%;
+            margin-bottom: 10%;
+        }
+
+        @include sp {
+            margin-bottom: 15%;
+        }
+
+        @include msp {
+            margin-bottom: 20%;
+        }
+    }
+}
+
+.contact_textarea {
+    width: 40%;
+    height: 18em;
+    border: solid 1px $color;
+    background-color: $box;
+    margin-bottom: 14%;
+
+    @include btab {
+        width: 50%;
+    }
+
+    @include tab2 {
+        width: 100%;
+    }
+}
+
+.requiredbtn {
+    height: 1em;
+    font-size: 0.8em;
+    color: $white;
+    background-color: $orange2;
+    padding: 1.5% 4.5%;
+    text-align: center;
+
+    @include ssp {
+        font-size: 0.6em;
+        padding: 2% 4.5%;
+    }
+}
+
+.submit_btn {
+    display: block;
+    padding: 1.8% 12%;
+    margin: 0 auto;
+
+    @include tab {
+        padding: 2% 18%;
+    }
+
+    a {
+        font-size: 1.8em;
+
+        @include pc {
+            font-size: 1.2em;
+        }
+    }
+
+    &:hover {
+        background-color: $white;
+        border: solid 1px $color;
+        transition: 0.4s;
+        cursor: pointer;
+
+        a {
+            color: $color;
+        }
+    }
+}
