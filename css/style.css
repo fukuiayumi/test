@@ -502,6 +502,10 @@ footer {
   }
 }
 
+.footer_nav_item a:hover {
+  color: gray;
+}
+
 .icon {
   width: 35%;
   display: -webkit-box;
@@ -1474,6 +1478,10 @@ footer {
   .footer_nav_item a {
     font-size: 0.6em;
   }
+}
+
+.footer_nav_item a:hover {
+  color: gray;
 }
 
 .icon {
