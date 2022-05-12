@@ -210,13 +210,17 @@
 
         @include tab {
             right: 20%;
-            z-index: 1;
+            z-index: 2;
         }
 
         @include tab2 {
             width: 40%;
             top: 75%;
             right: 25%;
+        }
+
+        @include tab3{
+            top: 70%;
         }
 
         @include sp {
