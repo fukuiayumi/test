@@ -22,18 +22,21 @@ body button a {
 }
 
 header {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 header nav {
-  width: 40%;
-  margin: 0 3% 0 auto;
-}
-
-@media screen and (max-width: 900px) {
-  header nav {
-    width: 60%;
-  }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 680px) {
@@ -65,14 +68,20 @@ header nav {
 }
 
 header nav ul {
-  width: 100%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 4% 0;
+  padding: 2% 0;
   list-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  header nav ul {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -80,6 +89,18 @@ header nav ul {
     display: block;
     margin: 15% auto;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header nav ul {
+    margin: 5% auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header nav ul {
+    margin: 0 auto;
   }
 }
 
@@ -504,6 +525,11 @@ footer {
 
 .footer_nav_item a:hover {
   opacity: 0.5;
+}
+
+.footer_nav_color a {
+  color: #fcfcfc;
+  border-bottom: solid 1px #fcfcfc;
 }
 
 .icon {
@@ -1004,18 +1030,21 @@ body button a {
 }
 
 header {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 header nav {
-  width: 40%;
-  margin: 0 3% 0 auto;
-}
-
-@media screen and (max-width: 900px) {
-  header nav {
-    width: 60%;
-  }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 680px) {
@@ -1047,14 +1076,20 @@ header nav {
 }
 
 header nav ul {
-  width: 100%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 4% 0;
+  padding: 2% 0;
   list-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  header nav ul {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -1062,6 +1097,18 @@ header nav ul {
     display: block;
     margin: 15% auto;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header nav ul {
+    margin: 5% auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header nav ul {
+    margin: 0 auto;
   }
 }
 
@@ -1486,6 +1533,11 @@ footer {
 
 .footer_nav_item a:hover {
   opacity: 0.5;
+}
+
+.footer_nav_color a {
+  color: #fcfcfc;
+  border-bottom: solid 1px #fcfcfc;
 }
 
 .icon {

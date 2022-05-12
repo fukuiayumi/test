@@ -27,15 +27,14 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 
     nav {
-        width: 40%;
-        margin: 0 3% 0 auto;
-
-        @include btab {
-            width: 60%;
-        }
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @include tab2 {
             background-color: rgba(252, 252, 252, 0.7);
@@ -60,16 +59,28 @@ header {
         }
 
         ul {
-            width: 100%;
+            width: 40%;
             display: flex;
             justify-content: space-around;
-            padding: 4% 0;
+            padding: 2% 0;
             list-style: none;
+
+            @include btab{
+                width: 50%;
+            }
 
             @include tab2 {
                 display: block;
                 margin: 15% auto;
                 text-align: center;
+            }
+
+            @include sp{
+                margin: 5% auto;
+            }
+
+            @include ssp{
+                margin: 0 auto;
             }
 
             li {
@@ -405,6 +416,14 @@ footer {
             &:hover {
                 opacity: 0.5;
             }
+        }
+    }
+
+    &_nav_color{
+        
+        a{
+            color: $white;
+            border-bottom: solid 1px $white;
         }
     }
 }
